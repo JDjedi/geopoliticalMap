@@ -1,22 +1,30 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor'
 
-export default class Login extends React.Component {
+import PublicHeader from './PublicHeader';
+import NorthAmerica from './continents/NorthAmerica';
+import SouthAmerica from './continents/SouthAmerica';
+
+export default class MainMap extends React.Component {
 	constructor(props) {
 		super(props);				
-		this.state = {
-			error: ''
-		};
+		this.state = {};
 	}
 
 	render() {
 		return (
-			<div className="main-map-view">
-				<h1>Welcome to the map view</h1>
-				<p>Here is some paragraph</p>
-				{this.state.error && <p>{this.state.error}</p>} 
+			<div>
+				<PublicHeader title="Geopolitics"/>
+				<h1>Welcome to Geopolitical Map splash page.</h1>
+				<div className="page-content">
+					<div className="main-map-view">
+						<NorthAmerica />
+						<SouthAmerica />
+					</div>		
+				</div>
 			</div>
-
 		)
 	}
 }
+
+

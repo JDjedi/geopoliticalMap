@@ -12,13 +12,14 @@ import Signup from '../ui/Signup';
 import Dashboard from '../ui/Dashboard';
 import NotFound from '../ui/NotFound';
 import Login from '../ui/Login';
+import MainMap from '../ui/MainMap';
 
 export const history = createBrowserHistory();
 
 export const routes = (
   <Router history={history}>
     <Switch>
-      <PublicRoute path="/" component={Login} exact={true} />
+      <PublicRoute path="/" component={MainMap} exact={true} />
       <PublicRoute path="/signup" component={Signup} />
       <PrivateRoute path="/dashboard" component={Dashboard} exact={true} />
       <Route path="*" component={NotFound} />

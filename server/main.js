@@ -3,6 +3,8 @@ import { WebApp } from 'meteor/webapp';
 
 
 import '../imports/api/users';
+import '../imports/api/countries';
+import '../imports/fixtures/fixtures';
 import '../imports/startup/simple-schema-config.js';
 
 
